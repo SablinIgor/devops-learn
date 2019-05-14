@@ -19,7 +19,7 @@ resource "digitalocean_droplet" "devops" {
         "export PATH=$PATH:/usr/bin",
         # install nginx
         "sudo apt-get update",
-        "git clone https://github.com/gavriluk/jenkins-pipeline-workshop"
+        "git clone https://github.com/SablinIgor/jenkins-pipeline-workshop"
         ]
     }  
 }
