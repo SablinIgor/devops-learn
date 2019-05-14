@@ -1,0 +1,8 @@
+- hosts: devops
+  become: true
+
+  tasks:
+    - name: Clone repo with tools
+      git:
+        repo: https://github.com/SablinIgor/jenkins-pipeline-workshop
+        dest: /home/devuser/jenkins-pipeline-workshop

@@ -1,0 +1,4 @@
+---
+- import_playbook: docker.yml
+- import_playbook: git.yml
+- import_playbook: tools.yml

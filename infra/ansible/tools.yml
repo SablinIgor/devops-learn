@@ -1,0 +1,7 @@
+- hosts: devops
+  become: true
+
+  tasks:
+    - name: Start devops tools
+      docker_service:
+        project_src: /home/devuser/jenkins-pipeline-workshop

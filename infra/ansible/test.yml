@@ -1,0 +1,10 @@
+
+---
+- name: Test playbook
+  hosts: devops
+  become: true
+  gather_facts: False
+
+  tasks:
+    - name: Check connectivity
+      ping: 
