@@ -67,6 +67,33 @@ resource "null_resource" "jenkins" {
   }
 }
 
+resource "null_resource" "jenkins-slaves" {
+  # Changes to any instance of the cluster requires re-provisioning
+  triggers = {
+    cluster_instance_ids = "${module.ec2-slave.server-id[count.index]}"
+  }
+
+  # Bootstrap script can run on any instance of the cluster
+  # So we just choose the first in this case
+  connection {
+    host = "${module.ec2-slave.server-ip}"
+    type     = "ssh"
+    user     = "ec2-user"
+    password = ""
+    private_key = "${file("~/.ssh/devops-learn.pem")}"
+  }
+
+  provisioner "remote-exec" {
+    # Bootstrap script called with private_ip of each node in the cluster
+    inline = [
+      "sudo yum install java-1.8.0-openjdk-devel -y",
+      "sudo amazon-linux-extras install docker -y",
+      "sudo service docker start",
+      "sudo usermod -a -G docker ec2-user"
+    ]
+  }
+}
+
 resource "null_resource" "nexus" {
   # Changes to any instance of the cluster requires re-provisioning
   triggers = {
