@@ -10,6 +10,7 @@ https://medium.com/@mitesh_shamra/terraform-provisioner-fa0911d65ce9
 ## Jenkins master installation
 
 https://linuxize.com/post/how-to-install-jenkins-on-centos-7/
+https://docs.aws.amazon.com/en_us/AmazonECS/latest/developerguide/docker-basics.html#install_docker
 
 sudo yum install java-1.8.0-openjdk-devel -y
 sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
