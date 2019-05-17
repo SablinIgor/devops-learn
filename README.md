@@ -47,3 +47,9 @@ sudo wget https://product-downloads.atlassian.com/software/stash/downloads/atlas
 sudo chmod a+x atlassian-bitbucket-4.12.0-x64.bin
 
 
+## Post-install steps
+
+- Настроить Jenkins
+- Установить NodeJS-плагин
+- Подключить slave-ноды
+- Восстановить job-у
