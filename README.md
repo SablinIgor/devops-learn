@@ -51,5 +51,10 @@ sudo chmod a+x atlassian-bitbucket-4.12.0-x64.bin
 
 - Настроить Jenkins
 - Установить NodeJS-плагин
+- Стартовать докер на слейвах
 - Подключить slave-ноды
 - Восстановить job-у
+
+## TODO
+- silent config jenkins https://github.com/geerlingguy/ansible-role-jenkins
+
