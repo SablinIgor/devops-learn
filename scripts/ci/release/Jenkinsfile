@@ -4,10 +4,23 @@ pipeline {
   tools {nodejs "node"}
  
   stages {
-    stage('Example') {
+    stage('Cloning Git') {
       steps {
-        sh 'npm config ls'
+        git 'https://github.com/SablinIgor/devops-sample-app.git'
       }
     }
+
+    stage('Build') {
+      steps {
+        git 'https://github.com/SablinIgor/devops-sample-app.git'
+      }
+    }
+
+    stage('Test') {
+      steps {
+        git 'https://github.com/SablinIgor/devops-sample-app.git'
+      }
+    }
+    
   }
 }
