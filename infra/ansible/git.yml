@@ -4,9 +4,9 @@
     - name: Clone repo with tools
       git:
         repo: https://github.com/SablinIgor/jenkins-pipeline-workshop
-        dest: /home/devuser/jenkins-pipeline-workshop
+        dest: /home/ubuntu/jenkins-pipeline-workshop
 
     - name: Clone repo with sample app
       git:
         repo: https://github.com/SablinIgor/devops-sample-app.git
-        dest: /home/devuser/devops-sample-app
+        dest: /home/ubuntu/devops-sample-app

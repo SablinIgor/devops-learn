@@ -23,12 +23,12 @@ resource "google_compute_instance" "devops" {
 
   metadata {
     # путь до публичного ключа
-    ssh-keys = "devuser:${file(var.public_key_path)}"
+    ssh-keys = "ubuntu:${file(var.public_key_path)}"
   }
 
   connection {
     type  = "ssh"
-    user  = "devuser"
+    user  = "ubuntu"
     agent = false
 
     # путь до приватного ключа

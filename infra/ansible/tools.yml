@@ -2,24 +2,11 @@
   become: true
 
   tasks:
-    - name: Start devops tools
+    - name: Ubuntu
       user:
-        name: devuser
+        name: ubuntu
         groups: docker
         append: yes
 
-    - name: Set ownership
-      file:
-        path: /home/devuser/jenkins-pipeline-workshop
-        owner: 1000
-        group: 1000
-        recurse: yes
-        state: directory
 
-    - name: Set permissions
-      file:
-        path: /home/devuser/jenkins-pipeline-workshop
-        mode: 0777
-        recurse: yes
-        state: directory
 
