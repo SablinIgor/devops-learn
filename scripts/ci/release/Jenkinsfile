@@ -12,15 +12,15 @@ pipeline {
 
     stage('Build') {
       steps {
-        git 'https://github.com/SablinIgor/devops-sample-app.git'
+        sh 'npm install'
       }
     }
 
     stage('Test') {
       steps {
-        git 'https://github.com/SablinIgor/devops-sample-app.git'
+        sh 'npm test'
       }
     }
-    
+
   }
 }
