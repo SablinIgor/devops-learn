@@ -14,7 +14,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git 'https://github.com/SablinIgor/devops-sample-app.git'
+        git 'http://35.181.112.241:7990/scm/sam/myrepo.git'
       }
     }
 
